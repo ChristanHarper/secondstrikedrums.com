@@ -222,8 +222,7 @@
   .jobs { display: grid; gap: clamp(44px, 6vw, 72px); }
   .job { display: grid; grid-template-columns: 220px 1fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
   .job-meta { position: sticky; top: 110px; border-top: 1px solid var(--line-strong); padding-top: 16px; }
-  .job-no { display: block; font: 400 clamp(64px, 8vw, 104px)/.85 var(--display); color: transparent; -webkit-text-stroke: 1px var(--brass); }
-  .job-meta h3 { font-size: 30px; margin: 16px 0 0; }
+  .job-meta h3 { font-size: 30px; margin: 0; }
   .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .shot { position: relative; overflow: hidden; background: var(--ink-3); margin: 0; aspect-ratio: 4 / 5; }
   .job.land .shot { aspect-ratio: 4 / 3; }
@@ -350,7 +349,6 @@
     .tag-wrap:nth-child(n) { margin-top: 0; }
     .job { grid-template-columns: 1fr; }
     .job-meta { position: static; display: flex; align-items: baseline; gap: 18px; }
-    .job-meta h3 { margin: 0; }
     .faq-wrap { grid-template-columns: 1fr; }
     .meter { display: none; }
   }
@@ -572,31 +570,31 @@
       <p>Real jobs off the bench. Tap a photo to zoom.</p>
     </div>
 
-    <!-- To add a job: copy an <article class="job"> block, bump the number, swap the photos. Add "land" for landscape photos. -->
+    <!-- To add a job: copy an <article class="job"> block and swap the photos. Add "land" for landscape photos. -->
     <div class="jobs" id="gallery-grid">
       <article class="job reveal">
-        <div class="job-meta"><span class="job-no">01</span><h3>Wood shell revival</h3></div>
+        <div class="job-meta"><h3>Wood shell revival</h3></div>
         <div class="pair">
           <figure class="shot before"><button type="button"><img src="assets/img/work/job1-before.jpg" alt="Wood shell drum before restoration, dull finish and no hoops" loading="lazy"></button><figcaption>Before</figcaption></figure>
           <figure class="shot after"><button type="button"><img src="assets/img/work/job1-after.jpg" alt="Same wood shell drum after restoration, grain glowing, hoops and hardware back on" loading="lazy"></button><figcaption>After</figcaption></figure>
         </div>
       </article>
       <article class="job land reveal">
-        <div class="job-meta"><span class="job-no">02</span><h3>Wine red kit</h3></div>
+        <div class="job-meta"><h3>Wine red kit</h3></div>
         <div class="pair">
           <figure class="shot before"><button type="button"><img src="assets/img/work/job2-before.jpg" alt="Wine red drum kit before, stacked on a shelf" loading="lazy"></button><figcaption>Before</figcaption></figure>
           <figure class="shot after"><button type="button"><img src="assets/img/work/job2-after.jpg" alt="Wine red drum kit after, set up with a new black front head" loading="lazy"></button><figcaption>After</figcaption></figure>
         </div>
       </article>
       <article class="job land reveal">
-        <div class="job-meta"><span class="job-no">03</span><h3>Hollywood Meazzi snare</h3></div>
+        <div class="job-meta"><h3>Hollywood Meazzi snare</h3></div>
         <div class="pair">
           <figure class="shot before"><button type="button"><img src="assets/img/work/job3-before.jpg" alt="Hollywood Meazzi chrome snare before, cloudy and spotted chrome" loading="lazy"></button><figcaption>Before</figcaption></figure>
           <figure class="shot after"><button type="button"><img src="assets/img/work/job3-after.jpg" alt="Hollywood Meazzi chrome snare after, chrome cleaned to a mirror shine" loading="lazy"></button><figcaption>After</figcaption></figure>
         </div>
       </article>
       <article class="job reveal">
-        <div class="job-meta"><span class="job-no">04</span><h3>Teal kit</h3></div>
+        <div class="job-meta"><h3>Teal kit</h3></div>
         <div class="pair">
           <figure class="shot before"><button type="button"><img src="assets/img/work/job4-before.jpg" alt="Teal drum kit before, shells stacked in a room" loading="lazy"></button><figcaption>Before</figcaption></figure>
           <figure class="shot after"><button type="button"><img src="assets/img/work/job4-after.jpg" alt="Teal drum kit after, shells polished and stacked with the bass drum" loading="lazy"></button><figcaption>After</figcaption></figure>
