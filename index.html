@@ -219,34 +219,32 @@
   /* ===== gallery ===== */
   .gallery-head { display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 20px; margin-bottom: 50px; }
   .gallery-head p { margin: 0; color: var(--muted); }
-  .ba-wrap { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(28px, 5vw, 60px); align-items: center; margin-bottom: 16px; }
-  .ba { position: relative; aspect-ratio: 4 / 3; overflow: hidden; user-select: none; touch-action: pan-y; --pos: 50%; }
-  .ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; pointer-events: none; }
-  .ba .before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); filter: grayscale(.55) sepia(.45) brightness(.55) contrast(.85) blur(.4px); }
-  .ba .handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: var(--brass-hi); pointer-events: none; }
-  .ba .handle::after { content: "‹ ›"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); border: 1px solid var(--brass-hi); color: var(--brass-hi); font: 700 18px/1 var(--mono); }
-  .ba .tagl { position: absolute; top: 14px; padding: 6px 10px; background: var(--paper); color: var(--paper-ink); font: 700 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; pointer-events: none; }
-  .ba .tagl.l { left: 14px; } .ba .tagl.r { right: 14px; }
-  .ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
-  .ba-text h3 { font-size: 46px; margin-bottom: 14px; }
-  .ba-text p { margin: 0; }
-  .ba-text dl { margin: 22px 0 0; font: 400 15px/1.4 var(--mono); }
-  .ba-text dl div { display: flex; justify-content: space-between; padding: 10px 0; border-top: 1px solid var(--line); }
-  .ba-text dt { color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-  .ba-text dd { margin: 0; color: var(--cream); }
-  .demo-note { display: inline-block; margin-top: 16px; padding: 6px 10px; border: 1px dashed var(--line-strong); font: 700 11px/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-
-  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; grid-auto-flow: dense; gap: 14px; margin-top: 60px; }
-  .shot { position: relative; overflow: hidden; background: var(--ink-3); margin: 0; }
-  .shot.tall { grid-row: span 2; }
-  .shot.wide { grid-column: span 2; }
+  .jobs { display: grid; gap: clamp(44px, 6vw, 72px); }
+  .job { display: grid; grid-template-columns: 220px 1fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
+  .job-meta { position: sticky; top: 110px; border-top: 1px solid var(--line-strong); padding-top: 16px; }
+  .job-no { display: block; font: 400 clamp(64px, 8vw, 104px)/.85 var(--display); color: transparent; -webkit-text-stroke: 1px var(--brass); }
+  .job-meta h3 { font-size: 30px; margin: 16px 0 0; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .shot { position: relative; overflow: hidden; background: var(--ink-3); margin: 0; aspect-ratio: 4 / 5; }
+  .job.land .shot { aspect-ratio: 4 / 3; }
   .shot button { all: unset; display: block; width: 100%; height: 100%; cursor: zoom-in; }
-  .shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2, .8, .2, 1), filter .5s; filter: saturate(.9); }
-  .shot:hover img { transform: scale(1.06); filter: saturate(1.1); }
-  .shot figcaption { position: absolute; left: 12px; bottom: 12px; pointer-events: none; padding: 6px 9px; background: var(--paper); color: var(--paper-ink); font: 700 11.5px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
-  .shot.placeholder { display: grid; place-items: center; text-align: center; border: 1px dashed var(--line-strong); background: transparent; }
-  .shot.placeholder div { font: 700 12px/1.5 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-  .shot.placeholder svg { width: 28px; height: 28px; color: var(--brass); margin: 0 auto 8px; opacity: .7; }
+  .shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2, .8, .2, 1); }
+  .shot:hover img { transform: scale(1.05); }
+  .shot figcaption { position: absolute; left: 12px; top: 12px; pointer-events: none; padding: 6px 9px; background: var(--paper); color: var(--paper-ink); font: 700 11.5px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+  .shot.after figcaption { background: var(--brass-hi); }
+  .shot.before img { filter: saturate(.85); }
+  /* "after" wipes in once the pair scrolls into view */
+  .js .reveal .shot.after { clip-path: inset(0 100% 0 0); transition: clip-path 1.1s cubic-bezier(.7, 0, .2, 1) .35s; }
+  .js .reveal.in .shot.after { clip-path: inset(0 0 0 0); }
+
+  .reel { position: relative; margin: clamp(70px, 9vw, 110px) 0 40px; background: #000; overflow: hidden; }
+  .reel video { display: block; width: 100%; aspect-ratio: 1920 / 880; object-fit: cover; }
+  .reel::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(0, 0, 0, .7), transparent 55%); }
+  .reel-copy { position: absolute; left: clamp(20px, 4vw, 56px); bottom: clamp(20px, 4vw, 48px); z-index: 1; }
+  .reel-copy h3 { font-size: clamp(40px, 6vw, 84px); margin: 0 0 18px; }
+  .sound { display: inline-flex; align-items: center; gap: 10px; padding: 10px 14px; background: rgba(11, 9, 7, .7); border: 1px solid var(--line-strong); color: var(--cream); font: 700 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; cursor: pointer; }
+  .sound:hover { border-color: var(--brass); color: var(--brass-hi); }
+  .sound svg { width: 16px; height: 16px; }
   .gallery-cta { margin-top: 30px; text-align: center; }
 
   .lightbox { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; overflow: visible; }
@@ -350,8 +348,10 @@
   @media (max-width: 1000px) {
     .tags { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; gap: 90px; }
     .tag-wrap:nth-child(n) { margin-top: 0; }
-    .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 190px; }
-    .ba-wrap, .faq-wrap { grid-template-columns: 1fr; }
+    .job { grid-template-columns: 1fr; }
+    .job-meta { position: static; display: flex; align-items: baseline; gap: 18px; }
+    .job-meta h3 { margin: 0; }
+    .faq-wrap { grid-template-columns: 1fr; }
     .meter { display: none; }
   }
   @media (max-width: 860px) {
@@ -388,7 +388,9 @@
     body { font-size: 16px; }
     .brand { font-size: 17px; }
     .form-grid { grid-template-columns: 1fr; }
-    .gallery { grid-auto-rows: 150px; gap: 8px; }
+    .pair { gap: 8px; }
+    .reel video { aspect-ratio: 4 / 3; }
+    .reel::after { background: linear-gradient(0deg, rgba(0, 0, 0, .75), transparent 60%); }
     .tag { padding: 66px 22px 24px; }
     .lb-prev, .lb-next { top: auto; bottom: 20px; transform: none; }
     .lb-prev { left: calc(50% - 56px); } .lb-next { right: calc(50% - 56px); }
@@ -566,41 +568,54 @@
 <section class="section" id="gallery" style="background:var(--ink-2);border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="gallery-head reveal">
-      <div><span class="eyebrow">// Gallery</span><h2>Off the bench</h2></div>
-      <p>Drag the slider. That's the job.</p>
+      <div><span class="eyebrow">// Gallery</span><h2>Before &amp; after</h2></div>
+      <p>Real jobs off the bench. Tap a photo to zoom.</p>
     </div>
 
-    <!-- Before/after: swap both src values for a real before + after of the same drum (same angle) -->
-    <div class="ba-wrap reveal">
-      <div class="ba" id="ba">
-        <img src="assets/img/snare-full.jpg" alt="Snare drum after restoration">
-        <img class="before" src="assets/img/snare-full.jpg" alt="Snare drum before restoration">
-        <span class="tagl l">Before</span><span class="tagl r">After</span>
-        <div class="handle"></div>
-        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
-      </div>
-      <div class="ba-text">
-        <span class="eyebrow">Featured job</span>
-        <h3>Wood snare revival</h3>
-        <p>Full teardown, shell and hardware detail, new wires, tuned.</p>
-        <dl>
-          <div><dt>Service</dt><dd>Snare Revival</dd></div>
-          <div><dt>Turnaround</dt><dd>— days</dd></div>
-        </dl>
-        <span class="demo-note">Demo: replace with a real before/after</span>
-      </div>
+    <!-- To add a job: copy an <article class="job"> block, bump the number, swap the photos. Add "land" for landscape photos. -->
+    <div class="jobs" id="gallery-grid">
+      <article class="job reveal">
+        <div class="job-meta"><span class="job-no">01</span><h3>Wood shell revival</h3></div>
+        <div class="pair">
+          <figure class="shot before"><button type="button"><img src="assets/img/work/job1-before.jpg" alt="Wood shell drum before restoration, dull finish and no hoops" loading="lazy"></button><figcaption>Before</figcaption></figure>
+          <figure class="shot after"><button type="button"><img src="assets/img/work/job1-after.jpg" alt="Same wood shell drum after restoration, grain glowing, hoops and hardware back on" loading="lazy"></button><figcaption>After</figcaption></figure>
+        </div>
+      </article>
+      <article class="job land reveal">
+        <div class="job-meta"><span class="job-no">02</span><h3>Wine red kit</h3></div>
+        <div class="pair">
+          <figure class="shot before"><button type="button"><img src="assets/img/work/job2-before.jpg" alt="Wine red drum kit before, stacked on a shelf" loading="lazy"></button><figcaption>Before</figcaption></figure>
+          <figure class="shot after"><button type="button"><img src="assets/img/work/job2-after.jpg" alt="Wine red drum kit after, set up with a new black front head" loading="lazy"></button><figcaption>After</figcaption></figure>
+        </div>
+      </article>
+      <article class="job land reveal">
+        <div class="job-meta"><span class="job-no">03</span><h3>Hollywood Meazzi snare</h3></div>
+        <div class="pair">
+          <figure class="shot before"><button type="button"><img src="assets/img/work/job3-before.jpg" alt="Hollywood Meazzi chrome snare before, cloudy and spotted chrome" loading="lazy"></button><figcaption>Before</figcaption></figure>
+          <figure class="shot after"><button type="button"><img src="assets/img/work/job3-after.jpg" alt="Hollywood Meazzi chrome snare after, chrome cleaned to a mirror shine" loading="lazy"></button><figcaption>After</figcaption></figure>
+        </div>
+      </article>
+      <article class="job reveal">
+        <div class="job-meta"><span class="job-no">04</span><h3>Teal kit</h3></div>
+        <div class="pair">
+          <figure class="shot before"><button type="button"><img src="assets/img/work/job4-before.jpg" alt="Teal drum kit before, shells stacked in a room" loading="lazy"></button><figcaption>Before</figcaption></figure>
+          <figure class="shot after"><button type="button"><img src="assets/img/work/job4-after.jpg" alt="Teal drum kit after, shells polished and stacked with the bass drum" loading="lazy"></button><figcaption>After</figcaption></figure>
+        </div>
+      </article>
     </div>
+  </div>
 
-    <!-- To add a photo: copy a <figure class="shot"> block and swap the src + caption. Delete placeholders as real photos come in. -->
-    <div class="gallery reveal" id="gallery-grid">
-      <figure class="shot tall"><button type="button"><img src="assets/img/kit-stack.jpg" alt="Sparkle and chrome drums after a kit refresh" loading="lazy"></button><figcaption>Kit refresh</figcaption></figure>
-      <figure class="shot wide"><button type="button"><img src="assets/img/tools.jpg" alt="Drum key and tools on the workbench" loading="lazy"></button><figcaption>On the bench</figcaption></figure>
-      <figure class="shot tall"><button type="button"><img src="assets/img/snare-bench.jpg" alt="Wood shell snare after cleaning and polish" loading="lazy"></button><figcaption>Clean &amp; polish</figcaption></figure>
-      <figure class="shot placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Photo</div></figure>
-      <figure class="shot placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Photo</div></figure>
-      <figure class="shot wide placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Photo</div></figure>
-      <figure class="shot wide placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>Photo</div></figure>
+  <div class="reel reveal">
+    <video id="reel" muted loop playsinline preload="none" poster="assets/img/work/cymbal-polish.jpg" aria-label="Video: polishing a cymbal by hand">
+      <source src="assets/img/work/cymbal-polish.mp4" type="video/mp4">
+    </video>
+    <div class="reel-copy">
+      <h3>Elbow grease<br>included.</h3>
+      <button type="button" class="sound" id="reelSound" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="wave" d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg><span>Sound on</span></button>
     </div>
+  </div>
+
+  <div class="wrap">
     <div class="gallery-cta"><a href="https://www.instagram.com/secondstrikedrumco/" target="_blank" rel="noopener" class="btn ghost">More on Instagram</a></div>
   </div>
 </section>
@@ -953,9 +968,15 @@
   }), { threshold: .12 });
   $$('.reveal').forEach(el => io.observe(el));
 
-  /* ---------- before / after ---------- */
-  const ba = $('#ba');
-  ba.querySelector('input').addEventListener('input', e => ba.style.setProperty('--pos', e.target.value + '%'));
+  /* ---------- video reel: plays only while on screen ---------- */
+  const reel = $('#reel'), snd = $('#reelSound');
+  if (!reduced) new IntersectionObserver(([en]) => { en.isIntersecting ? reel.play().catch(() => {}) : reel.pause(); }, { threshold: .35 }).observe(reel);
+  snd.addEventListener('click', () => {
+    reel.muted = !reel.muted;
+    if (!reel.muted) reel.play().catch(() => {});
+    snd.setAttribute('aria-pressed', String(!reel.muted));
+    snd.querySelector('span').textContent = reel.muted ? 'Sound on' : 'Sound off';
+  });
 
   /* ---------- lightbox ---------- */
   const lb = $('#lightbox'), shots = $$('#gallery-grid .shot img');
@@ -963,7 +984,8 @@
   const show = i => {
     cur = (i + shots.length) % shots.length;
     $('#lbImg').src = shots[cur].src; $('#lbImg').alt = shots[cur].alt;
-    $('#lbCap').textContent = shots[cur].closest('figure').querySelector('figcaption')?.textContent || '';
+    const fig = shots[cur].closest('figure');
+    $('#lbCap').textContent = fig.closest('.job').querySelector('h3').textContent + ' / ' + fig.querySelector('figcaption').textContent;
   };
   shots.forEach((img, i) => img.parentElement.addEventListener('click', () => { show(i); lb.showModal(); }));
   $('#lbClose').addEventListener('click', () => lb.close());
