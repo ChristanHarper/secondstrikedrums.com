@@ -3,21 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Second Strike Drum Co. | Drum Restoration & Repair</title>
-<meta name="description" content="Drum cleaning, repair, setup, and restoration. Snares, full kits, vintage and modern. Send photos for a quote.">
+<title>Second Strike Drum Co. | Drum Restoration & Repair in Dickson County, TN</title>
+<meta name="description" content="Drum cleaning, repair, and restoration in Dickson County, TN, just west of Nashville. Snares, full kits, vintage and modern. Local drop-off or ship it in.">
 <meta name="theme-color" content="#0c0a08">
 <link rel="icon" type="image/png" href="assets/img/logo-sm.png">
 <link rel="apple-touch-icon" href="assets/img/logo-sm.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Second Strike Drum Co. | Drum Restoration & Repair">
-<meta property="og:description" content="Cleaning, repairs, and full restorations for snares and kits.">
+<meta property="og:title" content="Second Strike Drum Co. | Drum Restoration & Repair in Dickson County, TN">
+<meta property="og:description" content="Cleaning, repairs, and full restorations for snares and kits. Dickson County, TN, west of Nashville.">
 <meta property="og:image" content="https://secondstrikedrums.com/assets/img/og-image.jpg">
 <meta property="og:url" content="https://secondstrikedrums.com/">
 <link rel="canonical" href="https://secondstrikedrums.com/">
 <meta name="twitter:card" content="summary_large_image">
-<!-- TODO: fill in real business details -->
 <script type="application/ld+json">
-{ "@context": "https://schema.org", "@type": "LocalBusiness", "name": "Second Strike Drum Co.", "description": "Drum restoration, repair, and cleaning.", "image": "https://secondstrikedrums.com/assets/img/logo.png", "url": "https://secondstrikedrums.com/", "priceRange": "$$", "sameAs": ["https://www.instagram.com/secondstrikedrumco/"] }
+{ "@context": "https://schema.org", "@type": "LocalBusiness", "name": "Second Strike Drum Co.", "description": "Drum restoration, repair, and cleaning.", "image": "https://secondstrikedrums.com/assets/img/logo.png", "url": "https://secondstrikedrums.com/", "telephone": "+1-615-736-1869", "email": "secondstrikedrumco@gmail.com", "address": { "@type": "PostalAddress", "addressRegion": "TN", "addressCountry": "US" }, "areaServed": [{ "@type": "AdministrativeArea", "name": "Dickson County, TN" }, { "@type": "City", "name": "Nashville, TN" }], "priceRange": "$$", "sameAs": ["https://www.instagram.com/secondstrikedrumco/"] }
 </script>
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -156,6 +155,19 @@
   .scroll-cue { position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 5; font: 700 11px/1 var(--mono); letter-spacing: .3em; text-transform: uppercase; color: var(--muted); display: flex; flex-direction: column; align-items: center; gap: 10px; transition: opacity .4s; }
   .scroll-cue::after { content: ""; width: 1px; height: 34px; background: linear-gradient(var(--brass), transparent); animation: drip 1.8s ease-in-out infinite; }
   @keyframes drip { 0%, 100% { transform: scaleY(.3); transform-origin: top; } 50% { transform: scaleY(1); } }
+
+  /* ===== local ===== */
+  .local { background: var(--paper); color: var(--paper-ink); background-image: var(--noise); }
+  .local-row { display: flex; align-items: center; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; padding-top: 26px; padding-bottom: 26px; }
+  .local-where { display: flex; align-items: center; gap: 14px; }
+  .local-where svg { width: 40px; height: 40px; color: var(--copper); flex: none; }
+  .local-where b { display: block; font: 400 clamp(28px, 3.4vw, 40px)/1 var(--display); text-transform: uppercase; }
+  .local-where span { font: 700 13px/1.6 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--copper); }
+  .local ul { list-style: none; margin: 0; padding: 0; display: flex; }
+  .local li { padding: 2px 26px; border-left: 1px dashed rgba(28, 22, 16, .35); }
+  .local li b { display: block; font: 700 14px/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+  .local li span, .local li a { font: 600 17px/1.4 var(--label); color: var(--paper-ink); text-decoration: none; }
+  .local li a { border-bottom: 1px solid var(--copper); }
 
   /* ===== marquee ===== */
   .marquee { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--ink); padding: 22px 0; white-space: nowrap; }
@@ -383,6 +395,8 @@
     body > footer { padding-bottom: 100px; }
   }
   @media (max-width: 560px) {
+    .local ul { flex-wrap: wrap; gap: 14px 0; width: 100%; }
+    .local li { flex: 1 1 50%; padding: 0 12px 0 0; border: 0; }
     body { font-size: 16px; }
     .brand { font-size: 17px; }
     .form-grid { grid-template-columns: 1fr; }
@@ -423,9 +437,9 @@
 
     <div class="beats">
       <div class="beat on" data-step="0">
-        <span class="eyebrow">Second Strike Drum Co.</span>
+        <span class="eyebrow"><span style="white-space:nowrap">Dickson County, TN &middot;</span> <span style="white-space:nowrap">West of Nashville</span></span>
         <h1>Drum restoration <span>&amp; repair</span></h1>
-        <p>Cleaning, repairs, and full restorations for snares and kits.</p>
+        <p>Cleaning, repairs, and full restorations for snares and kits. Drop it off local or ship it in.</p>
         <div class="beat-ctas">
           <a href="#contact" class="btn">Get a Quote</a>
           <a href="#pricing" class="btn ghost">Prices</a>
@@ -467,6 +481,18 @@
     <span>Clean</span><i></i><span>Polish</span><i></i><span>Re-head</span><i></i><span>Re-wire</span><i></i><span>Tune</span><i></i><span>Restore</span><i></i>
   </div>
 </div>
+
+<!-- ===== LOCAL ===== -->
+<section class="local">
+  <div class="wrap local-row">
+    <div class="local-where"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Dickson County, TN</b><span>West of Nashville</span></div></div>
+    <ul>
+      <li><b>Local drop-off</b><span>By appointment</span></li>
+      <li><b>Out of town?</b><span>Ship it in</span></li>
+      <li><b>Call or text</b><a href="tel:+16157361869">615-736-1869</a></li>
+    </ul>
+  </div>
+</section>
 
 <!-- ===== PRICING ===== -->
 <section class="section" id="pricing">
@@ -635,11 +661,12 @@
       <p>Something else? <a href="#contact" style="color:var(--brass-hi)">Just ask.</a></p>
     </div>
     <div class="reveal">
-      <details><summary><b>Q.01</b>Are parts and heads included?</summary><p>No. Heads, parts, materials, and shipping are extra unless they're on your quote.</p></details>
-      <details><summary><b>Q.02</b>Is there an assessment fee?</summary><p>A $25 fee may apply for detailed inspections or custom estimates. We confirm it first, and it can be credited toward the work.</p></details>
-      <details><summary><b>Q.03</b>What if you find more problems?</summary><p>We call you before doing anything outside the original quote. Nothing extra without your OK.</p></details>
-      <details><summary><b>Q.04</b>How does shipping work?</summary><p>You ship to us. Return shipping is charged at actual label cost. Pack it well, and use tracking and insurance on valuable drums. Local drop-off by arrangement.</p></details>
-      <details><summary><b>Q.05</b>Anything you don't do?</summary><p>No machining, bearing-edge cutting, or structural shell repairs right now.</p></details>
+      <details><summary><b>Q.01</b>Where are you?</summary><p>Dickson County, Tennessee, just west of Nashville. Local drop-off and pickup by appointment. Call or text <a href="tel:+16157361869">615-736-1869</a> to set a time.</p></details>
+      <details><summary><b>Q.02</b>Are parts and heads included?</summary><p>No. Heads, parts, materials, and shipping are extra unless they're on your quote.</p></details>
+      <details><summary><b>Q.03</b>Is there an assessment fee?</summary><p>A $25 fee may apply for detailed inspections or custom estimates. We confirm it first, and it can be credited toward the work.</p></details>
+      <details><summary><b>Q.04</b>What if you find more problems?</summary><p>We call you before doing anything outside the original quote. Nothing extra without your OK.</p></details>
+      <details><summary><b>Q.05</b>Not local. Can I ship it?</summary><p>Yes. Ship it to us, and return shipping is charged at actual label cost. Pack it well, and use tracking and insurance on valuable drums.</p></details>
+      <details><summary><b>Q.06</b>Anything you don't do?</summary><p>No machining, bearing-edge cutting, or structural shell repairs right now.</p></details>
     </div>
   </div>
 </section>
@@ -650,22 +677,26 @@
     <div class="contact-info reveal">
       <span class="eyebrow">// Contact</span>
       <h2>Fill out a work order</h2>
-      <p>Send photos, get a written quote, then ship it or drop it off.</p>
+      <p>Based in Dickson County, TN. Send photos, get a written quote, then drop it off or ship it in.</p>
       <ol class="how">
         <li>Send photos &amp; details</li>
         <li>Get a written quote</li>
-        <li>Ship or drop off</li>
+        <li>Drop off or ship</li>
       </ol>
       <ul class="contact-list">
-        <!-- TODO: real contact details -->
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg><a href="mailto:email@secondstrikedrums.com">email@secondstrikedrums.com</a></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:5550000000">(555) 000-0000</a></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>City, State · drop-off by appt.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg><a href="mailto:secondstrikedrumco@gmail.com">secondstrikedrumco@gmail.com</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+16157361869">615-736-1869</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Dickson County, TN &middot; west of Nashville<br>Drop-off by appointment</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><a href="https://www.instagram.com/secondstrikedrumco/" target="_blank" rel="noopener">@secondstrikedrumco</a></li>
       </ul>
     </div>
 
-    <form class="order reveal" id="quoteForm">
+    <form class="order reveal" id="quoteForm" action="https://formsubmit.co/secondstrikedrumco@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="New work order: secondstrikedrums.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://secondstrikedrums.com/?sent=1#contact">
+      <input type="hidden" name="order_no" id="orderNoField">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <div class="order-head">
         <img src="assets/img/logo-sm.png" alt="">
         <h3>Work order</h3>
@@ -690,8 +721,8 @@
         <fieldset class="field">
           <legend>Getting it to us</legend>
           <div class="checks">
-            <label><input type="radio" name="dropoff" value="Ship" checked><span>Ship</span></label>
-            <label><input type="radio" name="dropoff" value="Drop off"><span>Drop off</span></label>
+            <label><input type="radio" name="dropoff" value="Drop off" checked><span>Drop off</span></label>
+            <label><input type="radio" name="dropoff" value="Ship"><span>Ship</span></label>
           </div>
         </fieldset>
         <div class="field full"><label for="details">What needs doing?</label><textarea id="details" name="details"></textarea></div>
@@ -699,12 +730,12 @@
           <label class="upload" for="photos">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>
             <span><span id="photoLabel">Attach photos</span><small>Front, badge, hardware, any damage</small></span>
-            <input id="photos" name="photos" type="file" accept="image/*" multiple>
+            <input id="photos" name="attachment" type="file" accept="image/*" multiple>
           </label>
         </div>
       </div>
       <button class="submit" type="submit">Submit work order →</button>
-      <div class="form-msg" id="formMsg" role="status">Preview only. Form not connected yet.</div>
+      <div class="form-msg" id="formMsg" role="status">Got it. We'll get back to you with a quote soon.</div>
     </form>
   </div>
 </section>
@@ -714,13 +745,13 @@
 <footer>
   <div class="giant" aria-hidden="true">Second Strike</div>
   <div class="wrap foot-row">
-    <span>&copy; <span id="yr">2026</span> Second Strike Drum Co.</span>
+    <span>&copy; <span id="yr">2026</span> Second Strike Drum Co. &middot; Dickson County, TN &middot; <a href="tel:+16157361869">615-736-1869</a></span>
     <nav><a href="#pricing">Pricing</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="https://www.instagram.com/secondstrikedrumco/" target="_blank" rel="noopener">Instagram</a></nav>
   </div>
 </footer>
 
 <div class="mobile-cta" id="mobileCta">
-  <a href="tel:5550000000" class="btn ghost">Call</a>
+  <a href="tel:+16157361869" class="btn ghost">Call</a>
   <a href="#contact" class="btn">Get a Quote</a>
 </div>
 
@@ -999,7 +1030,12 @@
     const n = e.target.files.length;
     $('#photoLabel').textContent = n ? `${n} photo${n > 1 ? 's' : ''} attached` : 'Attach photos';
   });
-  $('#quoteForm').addEventListener('submit', e => { e.preventDefault(); $('#formMsg').classList.add('show'); });
+  $('#orderNo').textContent = String(Date.now()).slice(-5, -1);
+  $('#orderNoField').value = $('#orderNo').textContent;
+  $('#quoteForm').addEventListener('submit', e => {
+    const b = e.target.querySelector('.submit'); b.disabled = true; b.textContent = 'Sending…';
+  });
+  if (new URLSearchParams(location.search).has('sent')) $('#formMsg').classList.add('show');
   const now = new Date();
   $('#orderDate').textContent = now.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
   $('#yr').textContent = now.getFullYear();
