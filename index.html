@@ -185,6 +185,11 @@
   .tag-wrap:nth-child(2) { --r: 1.5deg; margin-top: 30px; }
   .tag-wrap:nth-child(3) { --r: -1deg; margin-top: 12px; }
   .tag-wrap:hover { transform: rotate(0deg) translateY(-6px); }
+  .tag-wrap.wide { --r: .8deg; grid-column: 1 / -1; width: 100%; max-width: 860px; margin: 80px auto 0; }
+  .tag-split { display: grid; grid-template-columns: 1fr 1.1fr; gap: 10px 36px; align-items: start; }
+  .tag-split ul { margin: 18px 0 0; }
+  .tag-sub { margin: 0 0 14px; font: 400 15px/1.5 var(--mono); color: var(--paper-ink); }
+  .tag-note { margin: 0 0 20px; padding-top: 14px; border-top: 1px dashed rgba(28, 22, 16, .5); font: 400 13px/1.5 var(--mono); color: var(--paper-ink); opacity: .75; }
   .string { position: absolute; left: 50%; top: -70px; width: 2px; height: 104px; background: repeating-linear-gradient(to bottom, #a8957a 0 3px, #7d6c55 3px 6px); transform: translateX(-50%); z-index: 2; }
   .tag {
     position: relative; color: var(--paper-ink);
@@ -360,6 +365,7 @@
   @media (max-width: 1000px) {
     .tags { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; gap: 90px; }
     .tag-wrap:nth-child(n) { margin-top: 0; }
+    .tag-split { grid-template-columns: 1fr; }
     .job { grid-template-columns: 1fr; }
     .job-meta { position: static; display: flex; align-items: baseline; gap: 18px; }
     .faq-wrap { grid-template-columns: 1fr; }
@@ -552,6 +558,30 @@
           <a href="#contact" class="tag-btn" data-pkg="Full Revival">Book this →</a>
         </article>
       </div>
+      <div class="tag-wrap wide reveal">
+        <span class="string"></span>
+        <article class="tag">
+          <span class="hole"></span>
+          <div class="tag-top"><span>Special order</span><span>No. 04</span></div>
+          <div class="tag-split">
+            <div>
+              <h3>Custom Rack Build</h3>
+              <p class="tag-sub">Gibraltar rack building &amp; setup, built around your kit and how you play.</p>
+              <div class="price">Quote<small>custom</small></div>
+            </div>
+            <ul>
+              <li>Custom rack layout &amp; configuration</li>
+              <li>Gibraltar assembly &amp; hardware install</li>
+              <li>Tom, cymbal &amp; accessory mounting</li>
+              <li>Clamp positioning for ergonomics</li>
+              <li>Cable management, where applicable</li>
+              <li>Final adjustments &amp; setup inspection</li>
+            </ul>
+          </div>
+          <p class="tag-note">Priced on rack complexity, hardware, and install time. Hardware and parts quoted separately unless included in your estimate.</p>
+          <a href="#contact" class="tag-btn" data-pkg="Custom Rack Build">Get a rack quote →</a>
+        </article>
+      </div>
     </div>
 
     <div class="receipt-wrap reveal">
@@ -712,6 +742,7 @@
             <option>Snare Revival</option>
             <option>Kit Refresh</option>
             <option>Full Revival</option>
+            <option>Custom Rack Build</option>
             <option>Cleaning</option>
             <option>Repair</option>
             <option>Custom quote</option>
