@@ -691,7 +691,7 @@
       </ul>
     </div>
 
-    <form class="order reveal" id="quoteForm" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+    <form class="order reveal" id="quoteForm" action="https://script.google.com/macros/s/AKfycbyeCKGqPiBOZuagMJCZBQzZrGlEg8r_U6iuA0MOiYLiwPsmA25GbrPay1L6d1AfC_0/exec" method="POST">
       <input type="hidden" name="_subject" value="New work order: secondstrikedrums.com">
       <input type="hidden" name="order_no" id="orderNoField">
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
@@ -1025,7 +1025,7 @@
   $$('[data-pkg]').forEach(b => b.addEventListener('click', () => { service.value = b.dataset.pkg; }));
   $('#orderNo').textContent = String(Date.now()).slice(-5, -1);
   $('#orderNoField').value = $('#orderNo').textContent;
-  // Send to Formspree in the background so the customer stays on the page
+  // Send to the Google Apps Script (emails his Gmail) in the background so the customer stays on the page
   $('#quoteForm').addEventListener('submit', async e => {
     e.preventDefault();
     const form = e.target, b = form.querySelector('.submit'), msg = $('#formMsg');
